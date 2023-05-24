@@ -1,4 +1,4 @@
-import { Badge, Divider, IconButton, Toolbar } from '@mui/material';
+import { Badge, IconButton, Toolbar } from '@mui/material';
 import { styled } from '@mui/system';
 import { NavLink } from 'react-router-dom';
 import { FaShoppingBag } from 'react-icons/fa';
@@ -23,8 +23,10 @@ export const HeaderBtn = styled('button')`
   padding: 8px 12px;
   border-radius: 2px;
   height: 32px;
-  background-color: ${({ theme }) => theme.palette.custom.background.secondary};
-  color: ${({ theme }) => theme.palette.custom.text.primary};
+  background-color: ${({ theme, disabled }) =>
+    disabled && theme.palette.custom.background.accentSecondary};
+  color: ${({ theme, disabled }) =>
+    disabled ? theme.palette.custom.background.paper : theme.palette.custom.text.primary};
   font-family: 'Exo 2', 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -35,8 +37,9 @@ export const HeaderBtn = styled('button')`
 
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.palette.custom.background.accentSecondary};
-    color: ${({ theme }) => theme.palette.custom.background.paper};
+    background-color: ${({ theme, disabled }) =>
+      disabled ? 'none' : theme.palette.custom.background.accentSecondary};
+    color: ${({ theme, disabled }) => (disabled ? 'none' : theme.palette.custom.background.paper)};
   }
 `;
 
@@ -80,14 +83,11 @@ export const NavBar = styled(Toolbar)`
   position: relative;
   flex-direction: row;
   align-items: center;
+  margin-top: 12px;
 
   ${({ theme }) => theme.breakpoints.up('sm')} {
     min-height: 48px;
   }
-`;
-
-export const HeaderDivider = styled(Divider)`
-  margin-bottom: 10px;
 `;
 
 export const Logo = styled(NavLink)`
@@ -100,7 +100,7 @@ export const LogoImg = styled('img')`
 
 export const Nav = styled('ul')`
   display: flex;
-  min-width: 560px;
+  min-width: 500px;
 `;
 
 export const NavItem = styled('li')`
@@ -128,7 +128,8 @@ export const StyledLink = styled(NavLink)`
   &.active,
   &:hover,
   &:focus {
-    background-color: ${({ theme }) => theme.palette.custom.background.secondary};
+    background-color: ${({ theme }) => theme.palette.custom.background.accentSecondary};
+    color: ${({ theme }) => theme.palette.custom.background.paper};
   }
 `;
 
@@ -141,7 +142,7 @@ export const SocialNavItem = styled('li')``;
 export const StyledSocialLink = styled(NavLink)`
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.palette.custom.background.accent};
+    color: ${({ theme }) => theme.palette.custom.background.accentSecondary};
   }
 `;
 

@@ -1,4 +1,4 @@
-import { AppBar, Container } from '@mui/material';
+import { AppBar, Container, Divider } from '@mui/material';
 import { styled } from '@mui/system';
 
 export const NavBar = styled(AppBar)`
@@ -8,11 +8,18 @@ export const NavBar = styled(AppBar)`
   width: 100%;
   box-shadow: none;
   z-index: 0;
+  position: relative;
 
   ${({ theme }) => theme.breakpoints.up('md')} {
     z-index: 1;
-    box-shadow: ${({ theme }) => theme.palette.custom.shadow.primary};
+    // box-shadow: ${({ theme }) => theme.palette.custom.shadow.primary};
   }
+`;
+
+export const HeaderDivider = styled(Divider)`
+  position: absolute;
+  width: 100%;
+  left: 0;
 `;
 
 export const HeaderContainer = styled(Container)`

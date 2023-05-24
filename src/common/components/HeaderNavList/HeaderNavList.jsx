@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import logo from './../../../images/logo.png';
@@ -8,7 +8,6 @@ import {
   Cart,
   CartIcon,
   HeaderBtn,
-  HeaderDivider,
   HeaderNav,
   IconBadge,
   Logo,
@@ -25,9 +24,12 @@ import {
   SwitchLanguages,
 } from './HeaderNavList.styled';
 import i18n from 'utils/i18n';
-import { Typography } from '@mui/material';
 
 export const HeaderNavList = () => {
+  useEffect(() => {
+    i18n.changeLanguage('ua');
+  }, []);
+
   const location = useLocation();
   const langs = { en: { nativeName: 'EN' }, ua: { nativeName: 'UA' } };
   const { t } = useTranslation(['common']);
@@ -60,7 +62,6 @@ export const HeaderNavList = () => {
   return (
     <HeaderNav>
       <SwitchBar>
-        <Typography sx={{ marginRight: '8px', minWidth: '68px' }}>{t('language')}:</Typography>
         <SwitchLanguages>
           {Object.keys(langs).map(lang => (
             <HeaderBtn
@@ -82,7 +83,7 @@ export const HeaderNavList = () => {
           </Cart>
         </HeaderBtn>
       </SwitchBar>
-      <HeaderDivider />
+
       <NavBar disableGutters>
         <Logo to="/" state={{ from: location }}>
           <LogoImg src={logo} alt="Logo" />
