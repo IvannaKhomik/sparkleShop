@@ -32,6 +32,7 @@ export const getTheme = mode => ({
               secondary: '#ece5e5',
               active: '#ece5e5',
               accentSecondary: '#cc994b',
+              dark: '#fcd34d',
             },
             shadow: {
               primary:
@@ -39,6 +40,7 @@ export const getTheme = mode => ({
             },
             text: {
               primary: '#5b5b5b',
+              accent: '#ff9a03',
             },
           },
         }
@@ -50,6 +52,8 @@ export const getTheme = mode => ({
               paper: '#ffffff',
               secondary: '#121212',
               active: '#000000',
+              accentSecondary: '#cc994b',
+              dark: '#fcd34d',
             },
             shadow: {
               primary:
@@ -57,6 +61,7 @@ export const getTheme = mode => ({
             },
             text: {
               primary: '#ffffff',
+              accent: '#ff9a03',
             },
           },
         }),

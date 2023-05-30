@@ -7,6 +7,7 @@ import { Header } from 'common/components';
 import { getTheme } from 'theme/getTheme';
 import { CssBaseline } from '@mui/material';
 import { globalStyles } from 'GlobalStyles';
+import { Footer } from 'common/components';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 export const CommonLayout = () => {
@@ -34,6 +35,7 @@ export const CommonLayout = () => {
                 <Outlet />
               </Suspense>
             </LayoutContainer>
+            <Footer />
           </StyledContainer>
         </Suspense>
       </ThemeProvider>
