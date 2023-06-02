@@ -16,8 +16,8 @@ export const NavBar = styled('footer')`
   }
 `;
 export const FooterContainer = styled(Container)`
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin: 0 auto;
   color: ${({ theme }) => theme.palette.custom.text.primary};
   min-width: ${({ theme }) => theme.breakpoints.values.small};

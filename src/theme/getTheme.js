@@ -11,7 +11,7 @@ export const getTheme = mode => ({
       xs: 320,
       sm: 480,
       md: 768,
-      lmd: 1040,
+      lmd: 1024,
       lg: 1280,
       small: '320px',
       mobile: '480px',
@@ -41,6 +41,8 @@ export const getTheme = mode => ({
             text: {
               primary: '#5b5b5b',
               accent: '#ff9a03',
+              secondary: '#0f172a',
+              light: '#ffffff',
             },
           },
         }
@@ -62,6 +64,8 @@ export const getTheme = mode => ({
             text: {
               primary: '#ffffff',
               accent: '#ff9a03',
+              secondary: '#ffffff',
+              light: '#ffffff',
             },
           },
         }),

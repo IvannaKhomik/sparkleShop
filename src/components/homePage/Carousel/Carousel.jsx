@@ -7,7 +7,7 @@ import { CaptionDesc, Quotes, SliderCaption } from './Carousel.styled';
 
 export const Carousel = () => {
   return (
-    <CCarousel controls indicators transition="crossfade" style={{ height: '620px' }}>
+    <CCarousel controls indicators transition="crossfade" style={{ maxHeight: '500px' }}>
       <CCarouselItem>
         <CImage className="d-block" src={slide1} alt="girl into the garden" />
         <SliderCaption className="d-none d-md-block">

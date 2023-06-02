@@ -1,0 +1,22 @@
+{
+  "catalog": "Catalog",
+  "kids": "Kids clothing 4-16 years",
+  "babies": "Babies clothing 0-36 months",
+  "shoes": "Shoes",
+  "brands": "Brands",
+  "outlet": "Outlet",
+  "customer": "Delivery & Returns",
+  "delivery": "Delivery",
+  "returns": "Returns & refunds",
+  "tracking": "Track my order",
+  "contactUs": "Contact us",
+  "legalArea": "Legal area",
+  "privacyPolicy": "Privacy policy",
+  "termsOfUse": "Terms of use",
+  "termsOfSale": "Terms of sale",
+  "cokkies": "Cokkies settings",
+  "subscribeTo": "Subscribe to the SparkleShop newsletter",
+  "getSales": "Get an exclusive 10% off your first order",
+  "enterEmail": "Enter your email address",
+  "subscribe": "Subscribe"
+}

@@ -1,9 +1,12 @@
+import { FooterNavList } from '../FooterNavList';
 import { FooterContainer, NavBar } from './Footer.styled';
 
 export const Footer = () => {
   return (
     <NavBar>
-      <FooterContainer></FooterContainer>
+      <FooterContainer>
+        <FooterNavList />
+      </FooterContainer>
     </NavBar>
   );
 };
